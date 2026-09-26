@@ -29,7 +29,7 @@ namespace DVLD
         {
             InitializeComponent();
         }
-        private void _ResetPersonInfo()
+        public  void _ResetPersonInfo()
         {
             lbPersonID.Text = "????";
             lbName.Text = "????";

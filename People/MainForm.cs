@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Properties;
+using DVLD;
 
 namespace DVLD
 {
@@ -58,6 +59,19 @@ namespace DVLD
         }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUserInfo frm = new FrmUserInfo(clsGlobal.CurrentUser.UserID);
+            frm.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frm = new frmChangePassword(clsGlobal.CurrentUser.UserID);
+            frm.ShowDialog();
 
         }
     }
