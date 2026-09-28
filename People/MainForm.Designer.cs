@@ -239,6 +239,7 @@
             this.usersToolStripMenuItem1.Name = "usersToolStripMenuItem1";
             this.usersToolStripMenuItem1.Size = new System.Drawing.Size(47, 25);
             this.usersToolStripMenuItem1.Text = "Users";
+            this.usersToolStripMenuItem1.Click += new System.EventHandler(this.usersToolStripMenuItem1_Click);
             // 
             // accountSettingToolStripMenuItem
             // 
@@ -269,6 +270,7 @@
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.signOutToolStripMenuItem.Text = "Sign Out";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 

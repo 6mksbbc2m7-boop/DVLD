@@ -14,9 +14,12 @@ namespace DVLD
 {
     public partial class frmMainForm : Form
     {
-        public frmMainForm()
+        FrmLogin _frmlogin;
+        public frmMainForm(FrmLogin frm)
         {
             InitializeComponent();
+            _frmlogin = frm;
+
            
         }
 
@@ -73,6 +76,20 @@ namespace DVLD
             frmChangePassword frm = new frmChangePassword(clsGlobal.CurrentUser.UserID);
             frm.ShowDialog();
 
+        }
+
+        private void usersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmManageUsers frm = new FrmManageUsers();
+            frm.ShowDialog();
+
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentUser = null;
+            _frmlogin.Show();
+            this.Close();
         }
     }
 }

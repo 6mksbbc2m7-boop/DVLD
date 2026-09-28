@@ -47,16 +47,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
-    <Compile Include="ctrlUserControl.cs">
+    <Compile Include="Users\ctrlUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlUserControl.Designer.cs">
+    <Compile Include="Users\ctrlUserControl.Designer.cs">
       <DependentUpon>ctrlUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChangePassword.cs">
+    <Compile Include="Login\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChangePassword.Designer.cs">
+    <Compile Include="Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\FrmManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FrmManageUsers.Designer.cs">
+      <DependentUpon>FrmManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\FrmUserInfo.cs">
@@ -120,10 +132,16 @@
     <EmbeddedResource Include="Controls\crtPersonCard.resx">
       <DependentUpon>crtPersonCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlUserControl.resx">
+    <EmbeddedResource Include="Users\ctrlUserControl.resx">
       <DependentUpon>ctrlUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChangePassword.resx">
+    <EmbeddedResource Include="Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FrmManageUsers.resx">
+      <DependentUpon>FrmManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\FrmUserInfo.resx">
