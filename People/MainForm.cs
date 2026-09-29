@@ -91,5 +91,11 @@ namespace DVLD
             _frmlogin.Show();
             this.Close();
         }
+
+        private void manageApplicationTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmManageApplicationTypes frm = new FrmManageApplicationTypes();
+            frm.ShowDialog();
+        }
     }
 }

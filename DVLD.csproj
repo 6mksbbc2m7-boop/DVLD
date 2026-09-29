@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
+    <Compile Include="FrmEditeApplicationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditeApplicationType.Designer.cs">
+      <DependentUpon>FrmEditeApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmManageApplicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmManageApplicationTypes.Designer.cs">
+      <DependentUpon>FrmManageApplicationTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\ctrlUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +143,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\crtPersonCard.resx">
       <DependentUpon>crtPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditeApplicationType.resx">
+      <DependentUpon>FrmEditeApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmManageApplicationTypes.resx">
+      <DependentUpon>FrmManageApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ctrlUserControl.resx">
       <DependentUpon>ctrlUserControl.cs</DependentUpon>
