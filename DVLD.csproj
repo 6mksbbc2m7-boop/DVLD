@@ -47,17 +47,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsGlobal.cs" />
-    <Compile Include="FrmEditeApplicationType.cs">
+    <Compile Include="Application\ApplicationTypes\FrmEditeApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditeApplicationType.Designer.cs">
+    <Compile Include="Application\ApplicationTypes\FrmEditeApplicationType.Designer.cs">
       <DependentUpon>FrmEditeApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmManageApplicationTypes.cs">
+    <Compile Include="Application\ApplicationTypes\FrmManageApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmManageApplicationTypes.Designer.cs">
+    <Compile Include="Application\ApplicationTypes\FrmManageApplicationTypes.Designer.cs">
       <DependentUpon>FrmManageApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTestList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTestList.Designer.cs">
+      <DependentUpon>FrmTestList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateTestType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateTestType.Designer.cs">
+      <DependentUpon>FrmUpdateTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\ctrlUserControl.cs">
       <SubType>UserControl</SubType>
@@ -144,11 +156,17 @@
     <EmbeddedResource Include="Controls\crtPersonCard.resx">
       <DependentUpon>crtPersonCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditeApplicationType.resx">
+    <EmbeddedResource Include="Application\ApplicationTypes\FrmEditeApplicationType.resx">
       <DependentUpon>FrmEditeApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmManageApplicationTypes.resx">
+    <EmbeddedResource Include="Application\ApplicationTypes\FrmManageApplicationTypes.resx">
       <DependentUpon>FrmManageApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTestList.resx">
+      <DependentUpon>FrmTestList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateTestType.resx">
+      <DependentUpon>FrmUpdateTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\ctrlUserControl.resx">
       <DependentUpon>ctrlUserControl.cs</DependentUpon>
