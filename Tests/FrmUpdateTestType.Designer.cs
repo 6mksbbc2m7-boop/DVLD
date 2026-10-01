@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.btClose = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFees = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,6 +101,7 @@
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(227, 20);
             this.txtTitle.TabIndex = 5;
+            this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitle_Validating);
             // 
             // txtDescription
             // 
@@ -105,6 +109,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(227, 20);
             this.txtDescription.TabIndex = 6;
+            this.txtDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtDescription_Validating);
             // 
             // btSave
             // 
@@ -114,6 +119,7 @@
             this.btSave.TabIndex = 7;
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // btClose
             // 
@@ -123,6 +129,7 @@
             this.btClose.TabIndex = 8;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // label5
             // 
@@ -140,6 +147,11 @@
             this.txtFees.Name = "txtFees";
             this.txtFees.Size = new System.Drawing.Size(227, 20);
             this.txtFees.TabIndex = 10;
+            this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmUpdateTestType
             // 
@@ -160,6 +172,7 @@
             this.Name = "FrmUpdateTestType";
             this.Text = "FrmUpdateTestType";
             this.Load += new System.EventHandler(this.FrmUpdateTestType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,5 +191,6 @@
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtFees;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

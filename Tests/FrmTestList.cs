@@ -54,7 +54,7 @@ namespace DVLD
 
         private void editeTestTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmUpdateTestType frm = new FrmUpdateTestType((int)dtMangeTestType.CurrentRow.Cells[0].Value);
+            FrmUpdateTestType frm = new FrmUpdateTestType((clsTestType.enTestType)dtMangeTestType.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             FrmTestList_Load(null, null);
         }
