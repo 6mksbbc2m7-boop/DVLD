@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global Classes\clsFormat.cs" />
     <Compile Include="clsGlobal.cs" />
     <Compile Include="Application\ApplicationTypes\FrmEditeApplicationType.cs">
       <SubType>Form</SubType>
@@ -58,6 +59,12 @@
     </Compile>
     <Compile Include="Application\ApplicationTypes\FrmManageApplicationTypes.Designer.cs">
       <DependentUpon>FrmManageApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Local Driving Licens\FrmAddUpdateLocalDrivingLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Local Driving Licens\FrmAddUpdateLocalDrivingLicenseApplications.Designer.cs">
+      <DependentUpon>FrmAddUpdateLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\FrmTestList.cs">
       <SubType>Form</SubType>
@@ -161,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application\ApplicationTypes\FrmManageApplicationTypes.resx">
       <DependentUpon>FrmManageApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Local Driving Licens\FrmAddUpdateLocalDrivingLicenseApplications.resx">
+      <DependentUpon>FrmAddUpdateLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\FrmTestList.resx">
       <DependentUpon>FrmTestList.cs</DependentUpon>

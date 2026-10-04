@@ -120,6 +120,7 @@
             this.localDrivingLicensesToolStripMenuItem.Name = "localDrivingLicensesToolStripMenuItem";
             this.localDrivingLicensesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.localDrivingLicensesToolStripMenuItem.Text = "Local Driving Licenses";
+            this.localDrivingLicensesToolStripMenuItem.Click += new System.EventHandler(this.localDrivingLicensesToolStripMenuItem_Click);
             // 
             // interToolStripMenuItem
             // 
