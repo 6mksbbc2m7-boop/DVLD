@@ -25,10 +25,11 @@ namespace DVLD
             _UserID = UserID;
 
         }
+        
         private void _LoadData()
         {
             _User = clsUsers.FindByUserID(_UserID);
-            crtPersonCard1.Enabled = false;
+            crtPersonCard1.FilterEnabled = false;
             if(_User==null)
             {
                 MessageBox.Show("No User With This ID " + _User + "check another User,");
@@ -53,12 +54,16 @@ namespace DVLD
                 lbTitle.Text = "Add New User ";
                 this.Text = "Add New User ";
                 _User = new clsUsers();
+                tbLoginInfo.Enabled = false;
+                crtPersonCard1.FilterFocus();
 
             }
             else
             {
                 lbTitle.Text = "Update User ";
                 this.Text = "Update User ";
+                tbLoginInfo.Enabled = true;
+                btSave.Enabled = true;
             }
             txUserName.Text = "";
             txPassword.Text = "";
@@ -95,7 +100,7 @@ namespace DVLD
                 if(clsUsers.IsUserExistForPersonID(crtPersonCard1.PersonID))
                 {
                     MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    crtPersonCard1.Focus();
+                    crtPersonCard1.FilterFocus();
                 }
                 else
                 {
@@ -210,6 +215,11 @@ namespace DVLD
         private void FrmAddUpdateUsers_Activated(object sender, EventArgs e)
         {
             crtPersonCard1.Focus();
+        }
+
+        private void crtPersonCard1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

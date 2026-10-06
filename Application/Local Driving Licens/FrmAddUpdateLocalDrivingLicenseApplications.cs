@@ -33,8 +33,8 @@ namespace DVLD
         }
         private void _FillLicenseClassCompoBox()
         {
-            DataTable dt = new DataTable();
-            dt = clsLicenseClass.GetAllLicenseClasses();
+            DataTable dt = clsLicenseClass.GetAllLicenseClasses();
+            
             foreach(DataRow row in dt.Rows)
             {
                 cpLicenseClass.Items.Add(row["ClassName"]);

@@ -50,6 +50,9 @@ namespace DVLD
         {
             int UserID = (int)(dtListUsers.CurrentRow.Cells[0].Value);
             frmChangePassword frm = new frmChangePassword(UserID);
+            frm.ShowDialog();
+            FrmManageUsers_Load(null, null);
+            
         }
 
         private void FrmManageUsers_Load(object sender, EventArgs e)

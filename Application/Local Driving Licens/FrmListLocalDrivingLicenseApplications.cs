@@ -97,7 +97,8 @@ namespace DVLD
 
         private void showApplicationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmLocalDrivingLicenseApplicationInfo frm = new FrmLocalDrivingLicenseApplicationInfo((int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value);
+            int LocalDrivingLicenseApplicationID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FrmLocalDrivingLicenseApplicationInfo frm = new FrmLocalDrivingLicenseApplicationInfo(LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
 
             FrmListLocalDrivingLicenseApplications_Load(null, null);
@@ -184,6 +185,13 @@ namespace DVLD
 
             _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = "";
             lbRecord.Text = dgLocalDrivingLicenseApplications.Rows.Count.ToString();
+        }
+
+        private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseID =(int) dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FrmScheduleTest frm = new FrmScheduleTest(LocalDrivingLicenseID, clsTestType.enTestType.VisionTest);
+            frm.ShowDialog();
         }
     }
 }

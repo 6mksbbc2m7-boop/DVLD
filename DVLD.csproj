@@ -70,6 +70,18 @@
     <Compile Include="Application\Local Driving Licens\FrmListLocalDrivingLicenseApplications.Designer.cs">
       <DependentUpon>FrmListLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlSchedulTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlSchedulTest.Designer.cs">
+      <DependentUpon>ctrlSchedulTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScheduleTest.Designer.cs">
+      <DependentUpon>FrmScheduleTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global Classes\clsFormat.cs" />
     <Compile Include="clsGlobal.cs" />
     <Compile Include="Application\ApplicationTypes\FrmEditeApplicationType.cs">
@@ -207,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Application\Local Driving Licens\FrmListLocalDrivingLicenseApplications.resx">
       <DependentUpon>FrmListLocalDrivingLicenseApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlSchedulTest.resx">
+      <DependentUpon>ctrlSchedulTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScheduleTest.resx">
+      <DependentUpon>FrmScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\FrmTestList.resx">
       <DependentUpon>FrmTestList.cs</DependentUpon>

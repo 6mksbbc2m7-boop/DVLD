@@ -307,7 +307,7 @@ namespace DVLD
 
                 MessageBox.Show("Data Saved Successfully ");
 
-
+                if(DataBack !=null)
                 DataBack.Invoke(this, _Person.PersonID);
                 
 

@@ -31,6 +31,7 @@ namespace DVLD
         }
         public  void _ResetPersonInfo()
         {
+            _PersonID = -1;
             lbPersonID.Text = "????";
             lbName.Text = "????";
             lbNationalNO.Text = "????";
@@ -51,9 +52,7 @@ namespace DVLD
             if (ImagePerson != "")
                 if (File.Exists(ImagePerson))
                     pictureBox1.ImageLocation = ImagePerson;
-                else
-                    MessageBox.Show("Chould Not Find This Image");
-
+               
 
         }
 

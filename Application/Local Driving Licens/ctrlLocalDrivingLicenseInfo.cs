@@ -48,6 +48,7 @@ namespace DVLD
             if(_LocalDrivingLicenseApplication ==null)
             {
                 MessageBox.Show("No Application with ApplicationID = " + LocalDrivingLicenseID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
                 return;
             }
             _FillLocalDrivingLicenseApplicationInfo();

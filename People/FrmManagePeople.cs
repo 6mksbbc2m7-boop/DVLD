@@ -33,7 +33,7 @@ namespace DVLD
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int PersonID = (int)dgPeople.CurrentRow.Cells["PersonID"].Value;
+            int PersonID = (int)dgPeople.CurrentRow.Cells[0].Value;
             frmPersonDetails frm = new frmPersonDetails(PersonID);
             frm.ShowDialog();
                 
