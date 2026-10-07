@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlLocalDrivingLicenseInfo1 = new DVLD.ctrlLocalDrivingLicenseInfo();
             this.btClose = new System.Windows.Forms.Button();
+            this.ctrlLocalDrivingLicenseInfo1 = new DVLD.ctrlLocalDrivingLicenseInfo();
             this.SuspendLayout();
-            // 
-            // ctrlLocalDrivingLicenseInfo1
-            // 
-            this.ctrlLocalDrivingLicenseInfo1.Location = new System.Drawing.Point(1, -2);
-            this.ctrlLocalDrivingLicenseInfo1.Name = "ctrlLocalDrivingLicenseInfo1";
-            this.ctrlLocalDrivingLicenseInfo1.Size = new System.Drawing.Size(766, 376);
-            this.ctrlLocalDrivingLicenseInfo1.TabIndex = 0;
-            this.ctrlLocalDrivingLicenseInfo1.Load += new System.EventHandler(this.ctrlLocalDrivingLicenseInfo1_Load);
             // 
             // btClose
             // 
@@ -50,11 +42,19 @@
             this.btClose.UseVisualStyleBackColor = true;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // ctrlLocalDrivingLicenseInfo1
+            // 
+            this.ctrlLocalDrivingLicenseInfo1.Location = new System.Drawing.Point(1, -2);
+            this.ctrlLocalDrivingLicenseInfo1.Name = "ctrlLocalDrivingLicenseInfo1";
+            this.ctrlLocalDrivingLicenseInfo1.Size = new System.Drawing.Size(805, 376);
+            this.ctrlLocalDrivingLicenseInfo1.TabIndex = 0;
+            this.ctrlLocalDrivingLicenseInfo1.Load += new System.EventHandler(this.ctrlLocalDrivingLicenseInfo1_Load);
+            // 
             // FrmLocalDrivingLicenseApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 421);
+            this.ClientSize = new System.Drawing.Size(804, 421);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.ctrlLocalDrivingLicenseInfo1);
             this.Name = "FrmLocalDrivingLicenseApplicationInfo";

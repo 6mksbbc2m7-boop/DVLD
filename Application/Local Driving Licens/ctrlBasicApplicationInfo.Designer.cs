@@ -70,7 +70,7 @@
             this.gbApplicationBasicIfo.Controls.Add(this.label4);
             this.gbApplicationBasicIfo.Location = new System.Drawing.Point(0, 3);
             this.gbApplicationBasicIfo.Name = "gbApplicationBasicIfo";
-            this.gbApplicationBasicIfo.Size = new System.Drawing.Size(685, 225);
+            this.gbApplicationBasicIfo.Size = new System.Drawing.Size(826, 225);
             this.gbApplicationBasicIfo.TabIndex = 1;
             this.gbApplicationBasicIfo.TabStop = false;
             this.gbApplicationBasicIfo.Text = "Application Basic Info";
@@ -79,7 +79,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(449, 157);
+            this.linkLabel2.Location = new System.Drawing.Point(393, 159);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(87, 13);
             this.linkLabel2.TabIndex = 7;
@@ -90,7 +90,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(452, 105);
+            this.label11.Location = new System.Drawing.Point(393, 105);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 16);
             this.label11.TabIndex = 22;
@@ -100,7 +100,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(449, 71);
+            this.label10.Location = new System.Drawing.Point(390, 71);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 16);
             this.label10.TabIndex = 21;
@@ -110,7 +110,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(496, 25);
+            this.label9.Location = new System.Drawing.Point(437, 25);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 16);
             this.label9.TabIndex = 20;
@@ -120,7 +120,7 @@
             // 
             this.lbCreatedBy.AutoSize = true;
             this.lbCreatedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreatedBy.Location = new System.Drawing.Point(561, 105);
+            this.lbCreatedBy.Location = new System.Drawing.Point(512, 105);
             this.lbCreatedBy.Name = "lbCreatedBy";
             this.lbCreatedBy.Size = new System.Drawing.Size(47, 16);
             this.lbCreatedBy.TabIndex = 19;
@@ -130,7 +130,7 @@
             // 
             this.lbStatusDate.AutoSize = true;
             this.lbStatusDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStatusDate.Location = new System.Drawing.Point(561, 71);
+            this.lbStatusDate.Location = new System.Drawing.Point(512, 71);
             this.lbStatusDate.Name = "lbStatusDate";
             this.lbStatusDate.Size = new System.Drawing.Size(47, 16);
             this.lbStatusDate.TabIndex = 18;
@@ -140,7 +140,7 @@
             // 
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.Location = new System.Drawing.Point(561, 25);
+            this.lbDate.Location = new System.Drawing.Point(512, 25);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(47, 16);
             this.lbDate.TabIndex = 17;
@@ -252,7 +252,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbApplicationBasicIfo);
             this.Name = "ctrlBasicApplicationInfo";
-            this.Size = new System.Drawing.Size(722, 229);
+            this.Size = new System.Drawing.Size(829, 229);
             this.Load += new System.EventHandler(this.ctrlBasicApplicationInfo_Load);
             this.gbApplicationBasicIfo.ResumeLayout(false);
             this.gbApplicationBasicIfo.PerformLayout();

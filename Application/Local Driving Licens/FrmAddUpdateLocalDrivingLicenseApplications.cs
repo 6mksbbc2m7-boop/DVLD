@@ -67,8 +67,8 @@ namespace DVLD
         }
         private void _LoadData()
         {
-            crtPersonCard1.FilterEnabled = false;
-            _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByApplicationID(_LocalDrivingLicenseID);
+            ////crtPersonCard1.FilterEnabled = false;
+            _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseID);
             if(_LocalDrivingLicenseApplication==null)
             {
                 MessageBox.Show("No Application with ID = " + _LocalDrivingLicenseID, "Application Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -82,6 +82,7 @@ namespace DVLD
             lbApplicationDate.Text = clsFormat.DateToShort(_LocalDrivingLicenseApplication.ApplicationDate);
             lbFees.Text = _LocalDrivingLicenseApplication.PaidFees.ToString();
             lbCreatedBy.Text = clsUsers.FindByUserID(_LocalDrivingLicenseApplication.CreatedByUserID).UserName;
+
 
         }
 

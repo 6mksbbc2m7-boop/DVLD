@@ -38,9 +38,8 @@ namespace DVLD
             
 
             _LocalDrivingLicense = clsLocalDrivingLicenseApplication.FindByApplicationID(ApplicationID);
-            if (_LocalDrivingLicense != null)
-            {
-                lbID.Text = _LocalDrivingLicense.ApplicationID.ToString();
+            
+                 lbID.Text = _LocalDrivingLicense.ApplicationID.ToString();
                 lbStatus.Text = _LocalDrivingLicense.ApplicationStatus.ToString();
                 lbFees.Text = _LocalDrivingLicense.PaidFees.ToString();
                 lbType.Text = _LocalDrivingLicense.ApplicationTypeID.ToString();
@@ -49,10 +48,8 @@ namespace DVLD
                 lbStatusDate.Text = _LocalDrivingLicense.LastStatusDate.ToString();
                 lbCreatedBy.Text = _LocalDrivingLicense.CreatedByUserID.ToString();
 
-            }
-            else
-                MessageBox.Show("No Person");
-
+            
+           
 
         }
 

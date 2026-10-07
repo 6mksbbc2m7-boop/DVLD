@@ -74,10 +74,8 @@ namespace DVLD
             {
                 case "Person ID":
                     ctrlPersonCard1.ctrlPersonCard_Load(int.Parse(txtFiterValue.Text));
-
-
-                 
                     break;
+
                 case "National No":
                     ctrlPersonCard1.ctrlPersonCard_Load(txtFiterValue.Text);
                     break;

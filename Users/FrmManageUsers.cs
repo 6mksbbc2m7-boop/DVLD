@@ -37,6 +37,8 @@ namespace DVLD
             FrmAddUpdateUsers frm = new FrmAddUpdateUsers();
             frm.ShowDialog();
 
+            FrmManageUsers_Load(null, null);
+
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)

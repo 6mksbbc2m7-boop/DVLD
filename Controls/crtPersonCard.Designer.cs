@@ -56,8 +56,8 @@
             // 
             this.cbFiterBox.FormattingEnabled = true;
             this.cbFiterBox.Items.AddRange(new object[] {
-            "Find By PersonID",
-            "Find By NationalNo"});
+            "Person ID",
+            "National No"});
             this.cbFiterBox.Location = new System.Drawing.Point(88, 33);
             this.cbFiterBox.Name = "cbFiterBox";
             this.cbFiterBox.Size = new System.Drawing.Size(121, 21);

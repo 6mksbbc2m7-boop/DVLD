@@ -18,12 +18,17 @@ namespace DVLD
         private int _UserID = -1;
         clsUsers _User;
         
+        public FrmAddUpdateUsers()
+        {
+            InitializeComponent();
+            _Mode = enMode.AddNew;
+            
+
+        }
         public FrmAddUpdateUsers(int UserID)
         {
             InitializeComponent();
             _Mode = enMode.Update;
-            _UserID = UserID;
-
         }
         
         private void _LoadData()
@@ -72,11 +77,7 @@ namespace DVLD
             
 
         }
-        public FrmAddUpdateUsers()
-        {
-            InitializeComponent();
-            _Mode = enMode.AddNew;
-        }
+        
 
         private void FrmAddUpdateUsers_Load(object sender, EventArgs e)
         {
