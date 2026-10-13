@@ -33,7 +33,7 @@
             // 
             // ctrlSchedulTest1
             // 
-            this.ctrlSchedulTest1.Location = new System.Drawing.Point(2, -2);
+            this.ctrlSchedulTest1.Location = new System.Drawing.Point(0, -3);
             this.ctrlSchedulTest1.Name = "ctrlSchedulTest1";
             this.ctrlSchedulTest1.Size = new System.Drawing.Size(514, 571);
             this.ctrlSchedulTest1.TabIndex = 0;

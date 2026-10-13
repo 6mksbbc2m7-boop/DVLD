@@ -38,14 +38,15 @@
             this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btClose = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbRecord = new System.Windows.Forms.Label();
             this.scheduleTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.writtinTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.streetTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btClose = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbRecord = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgLocalDrivingLicenseApplications)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +100,8 @@
             this.editApplicationToolStripMenuItem,
             this.deleteApplicationToolStripMenuItem,
             this.cancelApplicationToolStripMenuItem,
-            this.scheduleTestToolStripMenuItem});
+            this.scheduleTestToolStripMenuItem,
+            this.issueDrivingLicenseToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(206, 136);
             // 
@@ -130,6 +132,44 @@
             this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
             this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
+            // 
+            // scheduleTestToolStripMenuItem
+            // 
+            this.scheduleTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visionTestToolStripMenuItem,
+            this.writtinTestToolStripMenuItem,
+            this.streetTestToolStripMenuItem});
+            this.scheduleTestToolStripMenuItem.Name = "scheduleTestToolStripMenuItem";
+            this.scheduleTestToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.scheduleTestToolStripMenuItem.Text = "Schedule Test";
+            // 
+            // visionTestToolStripMenuItem
+            // 
+            this.visionTestToolStripMenuItem.Name = "visionTestToolStripMenuItem";
+            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visionTestToolStripMenuItem.Text = "Vision Test";
+            this.visionTestToolStripMenuItem.Click += new System.EventHandler(this.visionTestToolStripMenuItem_Click);
+            // 
+            // writtinTestToolStripMenuItem
+            // 
+            this.writtinTestToolStripMenuItem.Name = "writtinTestToolStripMenuItem";
+            this.writtinTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.writtinTestToolStripMenuItem.Text = "Writtin Test";
+            this.writtinTestToolStripMenuItem.Click += new System.EventHandler(this.writtinTestToolStripMenuItem_Click);
+            // 
+            // streetTestToolStripMenuItem
+            // 
+            this.streetTestToolStripMenuItem.Name = "streetTestToolStripMenuItem";
+            this.streetTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.streetTestToolStripMenuItem.Text = "Street Test";
+            this.streetTestToolStripMenuItem.Click += new System.EventHandler(this.streetTestToolStripMenuItem_Click);
+            // 
+            // issueDrivingLicenseToolStripMenuItem
+            // 
+            this.issueDrivingLicenseToolStripMenuItem.Name = "issueDrivingLicenseToolStripMenuItem";
+            this.issueDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.issueDrivingLicenseToolStripMenuItem.Text = "Issue Driving License ";
+            this.issueDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.issueDrivingLicenseToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -171,35 +211,6 @@
             this.lbRecord.Size = new System.Drawing.Size(23, 16);
             this.lbRecord.TabIndex = 7;
             this.lbRecord.Text = "??";
-            // 
-            // scheduleTestToolStripMenuItem
-            // 
-            this.scheduleTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visionTestToolStripMenuItem,
-            this.writtinTestToolStripMenuItem,
-            this.streetTestToolStripMenuItem});
-            this.scheduleTestToolStripMenuItem.Name = "scheduleTestToolStripMenuItem";
-            this.scheduleTestToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.scheduleTestToolStripMenuItem.Text = "Schedule Test";
-            // 
-            // visionTestToolStripMenuItem
-            // 
-            this.visionTestToolStripMenuItem.Name = "visionTestToolStripMenuItem";
-            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.visionTestToolStripMenuItem.Text = "Vision Test";
-            this.visionTestToolStripMenuItem.Click += new System.EventHandler(this.visionTestToolStripMenuItem_Click);
-            // 
-            // writtinTestToolStripMenuItem
-            // 
-            this.writtinTestToolStripMenuItem.Name = "writtinTestToolStripMenuItem";
-            this.writtinTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.writtinTestToolStripMenuItem.Text = "Writtin Test";
-            // 
-            // streetTestToolStripMenuItem
-            // 
-            this.streetTestToolStripMenuItem.Name = "streetTestToolStripMenuItem";
-            this.streetTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.streetTestToolStripMenuItem.Text = "Street Test";
             // 
             // FrmListLocalDrivingLicenseApplications
             // 
@@ -244,5 +255,6 @@
         private System.Windows.Forms.ToolStripMenuItem visionTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem writtinTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem streetTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicenseToolStripMenuItem;
     }
 }

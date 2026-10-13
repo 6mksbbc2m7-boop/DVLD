@@ -190,8 +190,35 @@ namespace DVLD
         private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int LocalDrivingLicenseID =(int) dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
-            FrmScheduleTest frm = new FrmScheduleTest(LocalDrivingLicenseID, clsTestType.enTestType.VisionTest);
+            FrmListTestAppointments frm = new FrmListTestAppointments(LocalDrivingLicenseID, clsTestType.enTestType.VisionTest);
             frm.ShowDialog();
+            FrmListLocalDrivingLicenseApplications_Load(null, null);
+        }
+
+        private void writtinTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FrmListTestAppointments frm = new FrmListTestAppointments(LocalDrivingLicenseID, clsTestType.enTestType.WritenTest);
+            frm.ShowDialog();
+            FrmListLocalDrivingLicenseApplications_Load(null, null);
+        }
+
+        private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FrmIssueDriverLicenseForFirstTime frm = new FrmIssueDriverLicenseForFirstTime(LocalDrivingLicenseID);
+            frm.ShowDialog();
+
+            FrmListLocalDrivingLicenseApplications_Load(null, null);
+
+        }
+
+        private void streetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FrmListTestAppointments frm = new FrmListTestAppointments(LocalDrivingLicenseID, clsTestType.enTestType.StreetTest);
+            frm.ShowDialog();
+            FrmListLocalDrivingLicenseApplications_Load(null, null);
         }
     }
 }

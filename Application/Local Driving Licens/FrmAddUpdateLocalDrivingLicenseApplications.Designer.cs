@@ -121,6 +121,7 @@
             this.lbCreatedBy.Size = new System.Drawing.Size(25, 13);
             this.lbCreatedBy.TabIndex = 14;
             this.lbCreatedBy.Text = "???";
+            this.lbCreatedBy.Click += new System.EventHandler(this.lbCreatedBy_Click);
             // 
             // lbFees
             // 

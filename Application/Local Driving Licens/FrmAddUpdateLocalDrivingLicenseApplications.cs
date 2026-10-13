@@ -98,7 +98,7 @@ namespace DVLD
         }
         private void DataBackEvent(object sender, int PersonID)
         {
-            // Handle the data received
+            
             _SelectedPersonID = PersonID;
             crtPersonCard1.LoadPersonInfo(_SelectedPersonID);
 
@@ -116,6 +116,8 @@ namespace DVLD
                 cpLicenseClass.Focus();
                 return;
             }
+
+            
 
             _LocalDrivingLicenseApplication.ApplicantPersonID = crtPersonCard1.PersonID;
             _LocalDrivingLicenseApplication.ApplicationDate = DateTime.Now;
@@ -172,6 +174,11 @@ namespace DVLD
                 MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 crtPersonCard1.FilterFocus();
             }
+
+        }
+
+        private void lbCreatedBy_Click(object sender, EventArgs e)
+        {
 
         }
     }

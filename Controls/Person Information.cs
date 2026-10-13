@@ -84,29 +84,38 @@ namespace DVLD
         {
             
             _Person = clsPerson.Find(PersonID);
-            if (_Person == null)
+            if (_Person != null)
+            {
+                _FillPersonInfo();
+
+                
+            }
+            else
             {
                 _ResetPersonInfo();
                 MessageBox.Show("No Person With This ID" + PersonID + ",Error");
                 return;
             }
-            _FillPersonInfo();
-
+           
 
 
         }
         public void ctrlPersonCard_Load(string NationalNo)
         {
             _Person = clsPerson.Find(NationalNo);
-            if(_Person==null)
+            if (_Person != null)
             {
-                _ResetPersonInfo();
-                MessageBox.Show("No Person With This ID" + NationalNo + ",Error");
-                return;
+                _FillPersonInfo();
+
 
             }
-            _FillPersonInfo();
-
+            else
+            {
+                _ResetPersonInfo();
+                MessageBox.Show("No Person With This ID" + PersonID + ",Error");
+              
+                return;
+            }
 
 
         }

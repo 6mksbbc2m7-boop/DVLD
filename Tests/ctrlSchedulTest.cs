@@ -130,7 +130,7 @@ namespace DVLD
 
                 lbDescription.Text = "Schedule Test";
                 lbFees.Text = "0";
-                lbRAppFees.Text = "N/A";
+                lbRAppFees.Text = "0";
             }
 
             lbDLAppID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseID.ToString();

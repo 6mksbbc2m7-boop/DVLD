@@ -70,16 +70,46 @@
     <Compile Include="Application\Local Driving Licens\FrmListLocalDrivingLicenseApplications.Designer.cs">
       <DependentUpon>FrmListLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlSchedulTest.cs">
+    <Compile Include="ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlSchedulTest.Designer.cs">
-      <DependentUpon>ctrlSchedulTest.cs</DependentUpon>
+    <Compile Include="ctrlDriverLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmScheduleTest.cs">
+    <Compile Include="FrmIssueDriverLicenseForFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmScheduleTest.Designer.cs">
+    <Compile Include="FrmIssueDriverLicenseForFirstTime.Designer.cs">
+      <DependentUpon>FrmIssueDriverLicenseForFirstTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\ctrlScheduledTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\ctrlScheduledTest.Designer.cs">
+      <DependentUpon>ctrlScheduledTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\FrmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FrmTakeTest.Designer.cs">
+      <DependentUpon>FrmTakeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\ctrlSchedulTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\ctrlSchedulTest.Designer.cs">
+      <DependentUpon>ctrlSchedulTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\FrmListTestAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FrmListTestAppointments.Designer.cs">
+      <DependentUpon>FrmListTestAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\FrmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FrmScheduleTest.Designer.cs">
       <DependentUpon>FrmScheduleTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Global Classes\clsFormat.cs" />
@@ -220,10 +250,25 @@
     <EmbeddedResource Include="Application\Local Driving Licens\FrmListLocalDrivingLicenseApplications.resx">
       <DependentUpon>FrmListLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlSchedulTest.resx">
+    <EmbeddedResource Include="ctrlDriverLicenseInfo.resx">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIssueDriverLicenseForFirstTime.resx">
+      <DependentUpon>FrmIssueDriverLicenseForFirstTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\ctrlScheduledTest.resx">
+      <DependentUpon>ctrlScheduledTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\FrmTakeTest.resx">
+      <DependentUpon>FrmTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\ctrlSchedulTest.resx">
       <DependentUpon>ctrlSchedulTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmScheduleTest.resx">
+    <EmbeddedResource Include="Tests\FrmListTestAppointments.resx">
+      <DependentUpon>FrmListTestAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\FrmScheduleTest.resx">
       <DependentUpon>FrmScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\FrmTestList.resx">
