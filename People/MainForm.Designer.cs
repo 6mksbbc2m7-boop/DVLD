@@ -134,6 +134,7 @@
             this.renewDrivingLicenseToolStripMenuItem.Name = "renewDrivingLicenseToolStripMenuItem";
             this.renewDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
             this.renewDrivingLicenseToolStripMenuItem.Text = "Renew Driving License";
+            this.renewDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.renewDrivingLicenseToolStripMenuItem_Click);
             // 
             // replaToolStripMenuItem
             // 
@@ -177,6 +178,7 @@
             this.internationalDrivingLicesnseToolStripMenuItem.Name = "internationalDrivingLicesnseToolStripMenuItem";
             this.internationalDrivingLicesnseToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
             this.internationalDrivingLicesnseToolStripMenuItem.Text = "International Driving Licesnse";
+            this.internationalDrivingLicesnseToolStripMenuItem.Click += new System.EventHandler(this.internationalDrivingLicesnseToolStripMenuItem_Click);
             // 
             // detainLicensesToolStripMenuItem
             // 
@@ -194,12 +196,14 @@
             this.mangeDetainLicToolStripMenuItem.Name = "mangeDetainLicToolStripMenuItem";
             this.mangeDetainLicToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.mangeDetainLicToolStripMenuItem.Text = "Mange Detain Licenses";
+            this.mangeDetainLicToolStripMenuItem.Click += new System.EventHandler(this.mangeDetainLicToolStripMenuItem_Click);
             // 
             // detainLicensesToolStripMenuItem1
             // 
             this.detainLicensesToolStripMenuItem1.Name = "detainLicensesToolStripMenuItem1";
             this.detainLicensesToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.detainLicensesToolStripMenuItem1.Text = "Detain Licenses";
+            this.detainLicensesToolStripMenuItem1.Click += new System.EventHandler(this.detainLicensesToolStripMenuItem1_Click);
             // 
             // releaseDetainLicensesToolStripMenuItem
             // 

@@ -30,12 +30,14 @@ namespace DVLD
 
         private void interToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmInterNationalLicenseApplication frm = new FrmInterNationalLicenseApplication();
+            frm.ShowDialog();
         }
 
         private void replaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmLicenseReplacement frm = new FrmLicenseReplacement();
+            frm.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +48,8 @@ namespace DVLD
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FrmListDrivers frm = new FrmListDrivers();
+            frm.ShowDialog();
 
         }
 
@@ -120,6 +124,31 @@ namespace DVLD
         {
             FrmListLocalDrivingLicenseApplications frm = new FrmListLocalDrivingLicenseApplications();
             frm.ShowDialog();
+        }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRenewDriverLicenseInfo frm = new FrmRenewDriverLicenseInfo();
+            frm.ShowDialog();
+        }
+
+        private void detainLicensesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmDetaindLicense frm = new FrmDetaindLicense();
+            frm.ShowDialog();
+        }
+
+        private void mangeDetainLicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListDetaindLicenses frm = new FrmListDetaindLicenses();
+            frm.ShowDialog();
+        }
+
+        private void internationalDrivingLicesnseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListInternationalLicenses frm = new FrmListInternationalLicenses();
+            frm.ShowDialog();
+
         }
     }
 }

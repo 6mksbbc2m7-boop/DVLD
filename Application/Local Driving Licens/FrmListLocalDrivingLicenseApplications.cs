@@ -220,5 +220,14 @@ namespace DVLD
             frm.ShowDialog();
             FrmListLocalDrivingLicenseApplications_Load(null, null);
         }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FrmShowLicenseInfo frm = new FrmShowLicenseInfo(LocalDrivingLicenseID);
+            frm.ShowDialog();
+
+
+        }
     }
 }

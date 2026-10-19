@@ -48,7 +48,7 @@ namespace DVLD
         {
             _LicenseID = LicenseID;
             _License = clsLicense.Find(_LicenseID);
-            if(_License==null)
+            if (_License == null)
             {
                 MessageBox.Show("Could not find License ID = " + _LicenseID.ToString(),
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,7 +67,7 @@ namespace DVLD
             lbDateOfBirth.Text = clsFormat.DateToShort(_License.DriverInfo.PersonInfo.DateOfBirth);
             lbDriverID.Text = _License.DriverID.ToString();
             lbExpirationDate.Text = clsFormat.DateToShort(_License.ExpirationDate);
-            //lbIsDeatind.Text = _License.IsDetaind;
+            lbIsDeatind.Text = _License.IsDetained ? "yes" : "No";
             _LoadImage();
 
 
