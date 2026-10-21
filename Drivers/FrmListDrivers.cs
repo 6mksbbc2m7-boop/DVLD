@@ -87,16 +87,22 @@ namespace DVLD
                     break;
             }
 
-            if (Filtercolumn == "" && cbFilterBy.Text.Trim() == "None")
+            if(string.IsNullOrWhiteSpace(TxtFilter.Text))
             {
-                _dtAllDrivers.DefaultView.RowFilter = "";
+                
+                
+                    _dtAllDrivers.DefaultView.RowFilter = "";
                 return;
-            }
+                
 
-            if (Filtercolumn != "FullName" && Filtercolumn == "NationalNo")
-                _dtAllDrivers.DefaultView.RowFilter = string.Format("[{0}] = {1}", Filtercolumn, TxtFilter.Text.Trim());
-            else
+
+            }
+            if (Filtercolumn == "FullName" || Filtercolumn == "NationalNo")
+            {
                 _dtAllDrivers.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", Filtercolumn, TxtFilter.Text.Trim());
+            }
+            else
+                _dtAllDrivers.DefaultView.RowFilter = string.Format("[{0}] = {1}", Filtercolumn, TxtFilter.Text.Trim());
 
 
 

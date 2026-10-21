@@ -145,7 +145,7 @@ namespace DVLD
             }
             if (pbPersonImage.ImageLocation != null)
             {
-                //then we copy the new image to the image folder after we rename it
+                
                 string SourceImageFile = pbPersonImage.ImageLocation.ToString();
 
                 if (clsUtil.CopyImageToProjectImagesFolder(ref SourceImageFile))

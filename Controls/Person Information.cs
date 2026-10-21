@@ -112,7 +112,7 @@ namespace DVLD
             else
             {
                 _ResetPersonInfo();
-                MessageBox.Show("No Person With This ID" + PersonID + ",Error");
+                MessageBox.Show("No Person With This ID" + NationalNo + ",Error");
               
                 return;
             }

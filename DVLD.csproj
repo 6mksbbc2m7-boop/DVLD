@@ -82,16 +82,16 @@
     <Compile Include="Application\Release Detained License\FrmReleaseDetainedLicense.Designer.cs">
       <DependentUpon>FrmReleaseDetainedLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInterNationalLicenseApplication.cs">
+    <Compile Include="Application\International Licenses\FrmInterNationalLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInterNationalLicenseApplication.Designer.cs">
+    <Compile Include="Application\International Licenses\FrmInterNationalLicenseApplication.Designer.cs">
       <DependentUpon>FrmInterNationalLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmListInternationalLicenses.cs">
+    <Compile Include="Application\International Licenses\FrmListInternationalLicenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmListInternationalLicenses.Designer.cs">
+    <Compile Include="Application\International Licenses\FrmListInternationalLicenses.Designer.cs">
       <DependentUpon>FrmListInternationalLicenses.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\Detain Licenses\FrmListDetaindLicenses.cs">
@@ -334,10 +334,10 @@
     <EmbeddedResource Include="Application\Release Detained License\FrmReleaseDetainedLicense.resx">
       <DependentUpon>FrmReleaseDetainedLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInterNationalLicenseApplication.resx">
+    <EmbeddedResource Include="Application\International Licenses\FrmInterNationalLicenseApplication.resx">
       <DependentUpon>FrmInterNationalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmListInternationalLicenses.resx">
+    <EmbeddedResource Include="Application\International Licenses\FrmListInternationalLicenses.resx">
       <DependentUpon>FrmListInternationalLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Detain Licenses\FrmListDetaindLicenses.resx">
