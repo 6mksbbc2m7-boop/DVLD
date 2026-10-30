@@ -43,8 +43,8 @@ namespace DVLD
             }
             lbUserID.Text = _User.UserID.ToString();
             txUserName.Text = _User.UserName;
-            txPassword.Text = _User.Password;
-            txtConfirmPassword.Text = _User.Password;
+            txPassword.Text =clsSecurity.Hashing( _User.Password);
+            txtConfirmPassword.Text =clsSecurity.Hashing( _User.Password);
             rdtIsActive.Checked = _User.IsActive;
             crtPersonCard1.LoadPersonInfo(_User.PersonID);
 
@@ -123,7 +123,7 @@ namespace DVLD
             }
             _User.PersonID = crtPersonCard1.PersonID;
             _User.UserName = txUserName.Text.Trim();
-            _User.Password = txPassword.Text.Trim();
+            _User.Password =clsSecurity.Hashing( txPassword.Text.Trim());
             _User.IsActive = rdtIsActive.Checked;
             if(_User.Save())
             {
@@ -146,7 +146,7 @@ namespace DVLD
 
         private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (txtConfirmPassword.Text.Trim() != txPassword.Text.Trim())
+            if (txtConfirmPassword.Text.Trim() !=clsSecurity.Hashing( txPassword.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtConfirmPassword, "Password Confirmation does not match Password!");
@@ -219,6 +219,11 @@ namespace DVLD
         }
 
         private void crtPersonCard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbLoginInfo_Click(object sender, EventArgs e)
         {
 
         }

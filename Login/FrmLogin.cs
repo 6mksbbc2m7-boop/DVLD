@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace DVLD
 {
     public partial class FrmLogin : Form
     {
+
+      
         public FrmLogin()
         {
             InitializeComponent();
@@ -20,17 +23,18 @@ namespace DVLD
 
         private void button1_Click(object sender, EventArgs e)
         {
+          
             clsUsers User = clsUsers.FindByUserNameAndPassword(txtUserName.Text.Trim(), txtPassowrd.Text.Trim());
             if(User!=null)
             {
                 if(chRemeberme.Checked)
                 {
-                    clsGlobal.RememberUsernameAndPassword(txtUserName.Text.Trim(), txtPassowrd.Text.Trim());
+                    clsGlobal.RememberUsernameAndPasswordUsingWindowsRegistry(txtUserName.Text.Trim(), txtPassowrd.Text.Trim());
 
                 }
                 else
                 {
-                    clsGlobal.RememberUsernameAndPassword("", "");
+                    clsGlobal.RememberUsernameAndPasswordUsingWindowsRegistry("", "");
                 }
                 if(!User.IsActive)
                 {
@@ -59,8 +63,9 @@ namespace DVLD
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            string UserName = "", Password = "";
-            if (clsGlobal.GetStoredCredential(ref UserName, ref Password))
+            
+            string UserName = "" ,Password=""; 
+            if (clsGlobal.GetStoredCredentialUsingWindowsRegistry(ref UserName, ref Password))
             {
                 txtUserName.Text = UserName;
                 txtPassowrd.Text = Password;

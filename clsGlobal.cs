@@ -6,95 +6,78 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using Buisness;
+using System.Security.Cryptography;
 
 
 namespace DVLD
 {
     internal static class clsGlobal
     {
+      
+
+
         public static clsUsers CurrentUser;
 
-        public static bool RememberUsernameAndPassword(string Username, string Password)
+        public static bool RememberUsernameAndPasswordUsingWindowsRegistry(string Username, string Password)
         {
 
             try
             {
-                
-                string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+                string KeyPath = @"SOFTWARE\DVDL";
 
-
-                string filePath = currentDirectory + "\\data.txt";
-
-                
-                if (Username == "" && File.Exists(filePath))
+                using (RegistryKey BaseKey = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
                 {
-                    File.Delete(filePath);
-                    return true;
-
-                }
-
-                
-                string dataToSave = Username + "#//#" + Password;
-
-                
-                using (StreamWriter writer = new StreamWriter(filePath))
-                {
-                    
-                    writer.WriteLine(dataToSave);
-
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
-                return false;
-            }
-
-        }
-
-        public static bool GetStoredCredential(ref string Username, ref string Password)
-        {
-            
-            try
-            {
-                
-                string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-
-               
-                string filePath = currentDirectory + "\\data.txt";
-
-               
-                if (File.Exists(filePath))
-                {
-                   
-                    using (StreamReader reader = new StreamReader(filePath))
+                    using (RegistryKey Subkey = BaseKey.CreateSubKey(KeyPath, true))
                     {
-                        
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
-                        {
-                            Console.WriteLine(line); 
-                            string[] result = line.Split(new string[] { "#//#" }, StringSplitOptions.None);
+                        if (Subkey != null)
+                            Subkey.SetValue("Username", Username, RegistryValueKind.String);
+                            Subkey.SetValue("Password", Password, RegistryValueKind.String);
 
-                            Username = result[0];
-                            Password = result[1];
-                        }
-                        return true;
+
+                            return true;
+
+                       
+
+
+
                     }
                 }
-                else
-                {
-                    return false;
-                }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
                 return false;
             }
-
         }
+
+        public static bool GetStoredCredentialUsingWindowsRegistry(ref string Username, ref string Password)
+        {
+            try
+            {
+                string KeyPath = @"SOFTWARE\DVDL";
+
+                using (RegistryKey BaseKey = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
+                {
+                    using (RegistryKey Subkey = BaseKey.OpenSubKey(KeyPath))
+                    {
+                        Username = Subkey.GetValue("Username", null) as string;
+                        Password = Subkey.GetValue("Password", null) as string;
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+                return false;
+            }
+        }
+      
+        
+
+       
     }
 }

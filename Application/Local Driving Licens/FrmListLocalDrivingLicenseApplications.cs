@@ -19,6 +19,16 @@ namespace DVLD
         {
             InitializeComponent();
         }
+        private void _ScheduleTest(clsTestType.enTestType TestType)
+        {
+
+            int LocalDrivingLicenseApplicationID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            FrmListTestAppointments frm = new FrmListTestAppointments (LocalDrivingLicenseApplicationID, TestType);
+            frm.ShowDialog();
+
+            FrmListLocalDrivingLicenseApplications_Load(null, null);
+
+        }
 
         private void FrmListLocalDrivingLicenseApplications_Load(object sender, EventArgs e)
         {
@@ -83,7 +93,7 @@ namespace DVLD
             }
 
             if (FilterColumn == "LocalDrivingLicenseApplicationID")
-                //in this case we deal with integer not string.
+               
                 _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilterBy.Text.Trim());
             else
                 _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterBy.Text.Trim());
@@ -189,18 +199,12 @@ namespace DVLD
 
         private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int LocalDrivingLicenseID =(int) dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
-            FrmListTestAppointments frm = new FrmListTestAppointments(LocalDrivingLicenseID, clsTestType.enTestType.VisionTest);
-            frm.ShowDialog();
-            FrmListLocalDrivingLicenseApplications_Load(null, null);
+            _ScheduleTest(clsTestType.enTestType.VisionTest);
         }
 
         private void writtinTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int LocalDrivingLicenseID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
-            FrmListTestAppointments frm = new FrmListTestAppointments(LocalDrivingLicenseID, clsTestType.enTestType.WritenTest);
-            frm.ShowDialog();
-            FrmListLocalDrivingLicenseApplications_Load(null, null);
+            _ScheduleTest(clsTestType.enTestType.VisionTest);
         }
 
         private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -215,10 +219,7 @@ namespace DVLD
 
         private void streetTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int LocalDrivingLicenseID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
-            FrmListTestAppointments frm = new FrmListTestAppointments(LocalDrivingLicenseID, clsTestType.enTestType.StreetTest);
-            frm.ShowDialog();
-            FrmListLocalDrivingLicenseApplications_Load(null, null);
+            _ScheduleTest(clsTestType.enTestType.VisionTest);
         }
 
         private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -228,6 +229,68 @@ namespace DVLD
             frm.ShowDialog();
 
 
+        }
+       
+
+
+
+        
+
+        private void dgLocalDrivingLicenseApplications_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+             
+        
+            int LocalDrivingLicenseApplicationID = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[0].Value;
+            clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication =
+                    clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID
+                                                    (LocalDrivingLicenseApplicationID);
+
+            int TotalPassedTests = (int)dgLocalDrivingLicenseApplications.CurrentRow.Cells[5].Value;
+
+            bool LicenseExists = LocalDrivingLicenseApplication.IsLicenseIssued();
+
+            //Enabled only if person passed all tests and Does not have license. 
+            issueDrivingLicenseToolStripMenuItem.Enabled = (TotalPassedTests == 3) && !LicenseExists;
+
+            showLicenseToolStripMenuItem.Enabled = LicenseExists;
+            editApplicationToolStripMenuItem.Enabled = !LicenseExists && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+            scheduleTestToolStripMenuItem.Enabled = !LicenseExists;
+
+            //Enable/Disable Cancel Menue Item
+            //We only canel the applications with status=new.
+            cancelApplicationToolStripMenuItem.Enabled = (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
+            //Enable/Disable Delete Menue Item
+            //We only allow delete incase the application status is new not complete or Cancelled.
+            deleteApplicationToolStripMenuItem.Enabled =
+                (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
+
+
+            //Enable Disable Schedule menue and it's sub menue
+            bool PassedVisionTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.VisionTest); ;
+            bool PassedWrittenTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.WritenTest);
+            bool PassedStreetTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.StreetTest);
+
+            scheduleTestToolStripMenuItem.Enabled = (!PassedVisionTest || !PassedWrittenTest || !PassedStreetTest) && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
+            if (scheduleTestToolStripMenuItem.Enabled)
+            {
+                //To Allow Schdule vision test, Person must not passed the same test before.
+                visionTestToolStripMenuItem.Enabled = !PassedVisionTest;
+
+                //To Allow Schdule written test, Person must pass the vision test and must not passed the same test before.
+                writtinTestToolStripMenuItem.Enabled = PassedVisionTest && !PassedWrittenTest;
+
+                //To Allow Schdule steet test, Person must pass the vision * written tests, and must not passed the same test before.
+                streetTestToolStripMenuItem.Enabled = PassedVisionTest && PassedWrittenTest && !PassedStreetTest;
+
+            }
         }
     }
 }

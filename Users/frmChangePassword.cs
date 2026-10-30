@@ -115,7 +115,7 @@ namespace DVLD
                 MessageBox.Show("Some Filde Not Valid ", "Validation Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            _User.Password = txtNewPassword.Text;
+            _User.Password =clsSecurity.Hashing( txtNewPassword.Text);
             if(_User.Save())
             {
                 MessageBox.Show("Password Changed Successfully,", "Saved", MessageBoxButtons.OK);

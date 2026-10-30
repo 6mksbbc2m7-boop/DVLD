@@ -115,6 +115,7 @@
             this.tbLoginInfo.TabIndex = 1;
             this.tbLoginInfo.Text = "Login Info";
             this.tbLoginInfo.UseVisualStyleBackColor = true;
+            this.tbLoginInfo.Click += new System.EventHandler(this.tbLoginInfo_Click);
             // 
             // rdtIsActive
             // 
@@ -133,6 +134,7 @@
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(100, 21);
             this.txtConfirmPassword.TabIndex = 7;
+            this.txtConfirmPassword.UseSystemPasswordChar = true;
             this.txtConfirmPassword.TextChanged += new System.EventHandler(this.txConfirmPassword_TextChanged);
             this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
             // 
@@ -142,6 +144,7 @@
             this.txPassword.Name = "txPassword";
             this.txPassword.Size = new System.Drawing.Size(100, 21);
             this.txPassword.TabIndex = 6;
+            this.txPassword.UseSystemPasswordChar = true;
             this.txPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txPassword_Validating);
             // 
             // txUserName

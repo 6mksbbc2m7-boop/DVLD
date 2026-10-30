@@ -93,6 +93,7 @@
             this.txtPassowrd.Name = "txtPassowrd";
             this.txtPassowrd.Size = new System.Drawing.Size(201, 20);
             this.txtPassowrd.TabIndex = 5;
+            this.txtPassowrd.UseSystemPasswordChar = true;
             // 
             // btLogin
             // 
